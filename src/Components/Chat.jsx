@@ -3,7 +3,8 @@ import { query, collection, onSnapshot, orderBy } from "firebase/firestore";
 
 import { db } from "../firebase";
 
-import Message from "./Message";
+import OutputMessage from "./OutputMessage";
+import InputMessage from "./InputMessage"
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -26,15 +27,16 @@ const Chat = () => {
     });
     return () => unsubscribe();
   }, []);
+  
   return (
     <>
       <main className="flex flex-col p-[10px] relative">
         {messages &&
           messages.map((message) => (
-            <Message key={message.id} message={message} />
+            <OutputMessage key={message.id} message={message} />
           ))}
       </main>
-
+            <InputMessage scroll={scroll}/>
       <span ref={scroll}></span>
     </>
   );

@@ -9,7 +9,7 @@ const Message = ({message}) => {
     return ( 
         <div>
             <div className={tailwind.message}>
-                <p className={tailwind.name}>V</p>
+                <p className={tailwind.name}>{message.name}</p>
                 <p className="">{message.text}</p>
             </div>
         </div>
