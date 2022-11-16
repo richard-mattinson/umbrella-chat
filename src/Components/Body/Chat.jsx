@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { query, collection, onSnapshot, orderBy } from "firebase/firestore";
 
-import { db } from "../firebase";
+import { db } from "../../firebase";
 
 import OutputMessage from "./OutputMessage";
-import InputMessage from "./InputMessage"
+import InputMessage from "./InputMessage";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -16,7 +16,6 @@ const Chat = () => {
       collection(db, "messages"),
       orderBy("createdAt")
     );
-    console.log("fbquery", firebaseQuery);
     const unsubscribe = onSnapshot(firebaseQuery, (querySnapshot) => {
       let messages = [];
       querySnapshot.docs.forEach((doc) => {
@@ -27,16 +26,16 @@ const Chat = () => {
     });
     return () => unsubscribe();
   }, []);
-  
+
   return (
     <>
-      <main className="flex flex-col p-[10px] relative">
+      <main className="relative z-10 flex flex-col p-[10px]">
         {messages &&
           messages.map((message) => (
             <OutputMessage key={message.id} message={message} />
           ))}
       </main>
-            <InputMessage scroll={scroll}/>
+      <InputMessage scroll={scroll} />
       <span ref={scroll}></span>
     </>
   );

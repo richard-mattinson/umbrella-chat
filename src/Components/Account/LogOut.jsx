@@ -1,6 +1,7 @@
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 
 const LogOut = () => {
+  // eslint-disable-next-line no-unused-vars
   const signOut = () => {
     signOut(auth);
   };
@@ -8,7 +9,7 @@ const LogOut = () => {
     <>
       <p>{}</p>
       <button
-        className="bg-gray-200 px-4 py-2 hover:bg-gray-100"
+        className="bg-gray-700 text-white px-4 py-2 hover:bg-gray-500"
         onClick={() => auth.signOut()}
       >
         Log out
