@@ -29,7 +29,7 @@ const Chat = () => {
 
   return (
     <>
-      <main className="relative z-10 flex flex-col p-[10px]">
+      <main className="relative z-10 flex flex-col p-[10px] bg-t">
         {messages &&
           messages.map((message) => (
             <OutputMessage key={message.id} message={message} />
