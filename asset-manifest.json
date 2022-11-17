@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/umbrella-chat/static/css/main.e6c13ad2.css",
-    "main.js": "/umbrella-chat/static/js/main.fab62e56.js",
+    "main.js": "/umbrella-chat/static/js/main.79abea46.js",
     "index.html": "/umbrella-chat/index.html",
     "main.e6c13ad2.css.map": "/umbrella-chat/static/css/main.e6c13ad2.css.map",
-    "main.fab62e56.js.map": "/umbrella-chat/static/js/main.fab62e56.js.map"
+    "main.79abea46.js.map": "/umbrella-chat/static/js/main.79abea46.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.fab62e56.js"
+    "static/js/main.79abea46.js"
   ]
 }
